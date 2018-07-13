@@ -1,1 +1,7 @@
-{{outlet}}
+<ul class="nav nav-tabs">
+    <li class="nav-item">{{#link-to  "bands.band.details" model class="nav-link"}}Details{{/link-to}}</li>
+    <li class="nav-item">{{#link-to  "bands.band.songs" model class="nav-link"}}Songs{{/link-to}}</li>
+</ul>
+<div class="band-info">
+    {{outlet}}
+</div>

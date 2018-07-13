@@ -1,16 +1,7 @@
-import EmberObject from '@ember/object';
-import { computed } from '@ember/object';
-import { on } from '@ember/object/evented';
+import DS from 'ember-data'
 
-export default EmberObject.extend({
-    name: '',
-    slug: computed('name', function() {
-        return this.get('name').dasherize();
-    }),
-
-    setupSongs: on('init', function() {
-        if (!this.get('songs')) {
-            this.set('songs', []);
-        }
-    }),
+export default DS.Model.extend({
+    name: DS.attr('string'),
+    description: DS.attr(),
+    songs: DS.hasMany('song'),
 });
