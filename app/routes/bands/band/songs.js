@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 import wait from '../../../utils/wait';
-//import { reject } from 'rsvp';
+import { capitalize as capitalizeWords } from '../../../helpers/capitalize';
 
 
 export default Route.extend({
@@ -14,7 +14,8 @@ export default Route.extend({
     actions: {
         didTransition: function() {
             var band = this.modelFor('bands.band');
-            document.title = `${band.get('name')} songs - Rock & Roll`;
+            var name = capitalizeWords(band.get('name'));
+            document.title = `${name} songs - Rock & Roll`;
         },
         createSong: function() {
             var controller = this.get('controller');

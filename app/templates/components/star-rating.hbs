@@ -1,5 +1,7 @@
-{{#each stars as |star|}}
-    <a href="#" {{action "setRating" star.rating}} class="star-rating ">
-        <i class="{{if star.full 'fas' 'far'}}  fa-star "></i>
-    </a>
-{{/each}}
+{{#liquid-bind stars as |liquidStars|}}
+    {{#each liquidStars as |star|}}
+        <a href="#" {{action "setRating" star.rating}} class="star-rating ">
+            <i class="{{if star.full 'fas' 'far'}}  fa-star "></i>
+        </a>
+    {{/each}}
+{{/liquid-bind}}
