@@ -7,7 +7,7 @@ import wait from '../utils/wait';
 export default Route.extend({
     model: function() {
         var bands = this.store.findAll('band');
-        return wait(bands, 3 * 1000);
+        return wait(bands, 3 * 10);
     },
     actions: {
         didTransition: function() {

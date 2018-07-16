@@ -17,6 +17,7 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "addon": "0.0.0",
     "bootstrap": "^4.1.1",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
@@ -47,5 +48,10 @@
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
+  },
+  "ember-addon": {
+    "paths": [
+      "../ember-cli-star-rating"
+    ]
   }
 }

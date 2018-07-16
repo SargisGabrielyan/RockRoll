@@ -42,9 +42,7 @@ export default Controller.extend({
         enableSongCreation: function() {
             this.set('songCreationStarted', true);
         },
-        updateRating: function(params) {
-            var song = params.item,
-                rating = params.rating;
+        updateRating: function(song, rating) {
             if (song.get('rating') === rating) {
                 rating = 0;
             }

@@ -5,7 +5,7 @@ import { capitalize as capitalizeWords } from '../../../helpers/capitalize';
 
 export default Route.extend({
     model: function() {
-        return wait(this.modelFor('bands.band'), 3000);
+        return wait(this.modelFor('bands.band'), 10);
         //return reject(this.modelFor('bands.band'));
     },
     resetController: function(controller) {
