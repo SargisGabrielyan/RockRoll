@@ -14,13 +14,6 @@ export default Route.extend({
             document.title = 'Bands - Rock & Roll';
         },
         createBand: function() {
-            // var name = this.get('controller').get('name');
-            // var band = Band.create({ name: name });
-            // this.modelFor('bands').pushObject(band);
-            // // bands.get('content').pushObject(band);
-            // this.get('controller').set('name', '');
-            //this.transitionTo('bands.band.songs', band)
-
             var route = this,
                 controller = this.get('controller');
             var band = this.store.createRecord('band',

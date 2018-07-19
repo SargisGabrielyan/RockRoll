@@ -8,7 +8,10 @@ hr {
     padding-top:1.7rem;
     padding-bottom: 1.7rem;
 }
-
+.test-page{
+    text-align: center;
+    margin-top: 30px
+}
 
 
 .page-header a h1 {
