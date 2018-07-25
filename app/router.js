@@ -14,7 +14,8 @@ Router.map(function() {
     });
   });
 
-  this.route('test-page');
+  this.route('test-page', {path: 'test-page-test'});
+  this.route('new-test');
 });
 
 export default Router;
